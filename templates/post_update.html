@@ -1,7 +1,11 @@
-<h1>Edit Post<h1>
+{% extends 'base.html'%}
 
-<form action="" method="post" enctype="multipart/form-data">  
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit"> Update </button>
-</form>
+{%block content%}
+    <h1>Edit Post<h1>
+
+    <form action="" method="post" enctype="multipart/form-data">  
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"> Update </button>
+    </form>
+{%endblock content%}
